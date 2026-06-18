@@ -1,7 +1,7 @@
 import Formulario from "./components/Formulario";
 import ListaVehiculos from "./components/ListaVehiculos";
 import { useState, useEffect } from "react";
-
+import "./App.css";
 
 function App() {
   const [vehiculos, setVehiculos] = useState(() => {
@@ -24,7 +24,7 @@ function App() {
   }, [vehiculos]);
 
   return (
-    <>
+    <div className="app">
       <header>
         <h1>Sistema de Gestión de Estacionamientos</h1>
       </header>
@@ -38,9 +38,9 @@ function App() {
       </main>
 
       <footer>
-        <p>Front End</p>
+        <p>AutoPark Chile © 2026</p>
       </footer>
-    </>
+    </div>
   );
 }
 

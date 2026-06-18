@@ -1,6 +1,6 @@
 function CardVehiculo({ vehiculo }) {
     return (
-        <div>
+        <div className={`card ${vehiculo.permanente ? "permanente" : "temporal"}`}>
             <h3>{vehiculo.patente}</h3>
             <p>Marca: {vehiculo.marca}</p>
             <p>

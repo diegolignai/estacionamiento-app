@@ -2,7 +2,7 @@ import CardVehiculo from "./CardVehiculo";
 
 function ListaVehiculos({ vehiculos }) {
   return (
-    <section>
+    <section className="contenedor-cards">
       {vehiculos.length === 0 ? (
         <p>No hay vehículos registrados</p>
       ) : (
