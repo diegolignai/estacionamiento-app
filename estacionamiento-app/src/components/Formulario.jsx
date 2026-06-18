@@ -26,9 +26,10 @@ function Formulario({ agregarVehiculo }) {
             permanente
         };
 
-        agregarVehiculo("");
+        agregarVehiculo(nuevoVehiculo);
         setMarca("");
         setPermanente(false);
+        setPatente("");
     };
 
     return (

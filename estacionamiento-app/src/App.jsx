@@ -1,14 +1,27 @@
 import Formulario from "./components/Formulario";
 import ListaVehiculos from "./components/ListaVehiculos";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 
 function App() {
-  const [vehiculos, setVehiculos] = useState([]);
+  const [vehiculos, setVehiculos] = useState(() => {
+    const vehiculosGuardados = localStorage.getItem("vehiculos");
+
+    return vehiculosGuardados
+      ? JSON.parse(vehiculosGuardados)
+      : [];
+  });
 
   const agregarVehiculo = (vehiculo) => {
     setVehiculos([...vehiculos, vehiculo]);
   };
+
+  useEffect(() => {
+    localStorage.setItem(
+      "vehiculos",
+      JSON.stringify(vehiculos)
+    );
+  }, [vehiculos]);
 
   return (
     <>
