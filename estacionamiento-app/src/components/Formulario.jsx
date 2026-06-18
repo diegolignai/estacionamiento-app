@@ -60,7 +60,7 @@ function Formulario({ agregarVehiculo }) {
                 />
             </div>
 
-            <buttton type="submit">Registrar Vehículo</buttton>
+            <button type="submit">Registrar Vehículo</button>
 
         </form>
     );

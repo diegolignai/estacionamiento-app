@@ -1,5 +1,7 @@
 import Formulario from "./components/Formulario";
+import ListaVehiculos from "./components/ListaVehiculos";
 import { useState } from "react";
+
 
 function App() {
   const [vehiculos, setVehiculos] = useState([]);
@@ -16,7 +18,10 @@ function App() {
 
       <main>
         <h2>Cupos disponibles: {10 - vehiculos.length}</h2>
+
         <Formulario agregarVehiculo={agregarVehiculo} />
+
+        <ListaVehiculos vehiculos={vehiculos} />
       </main>
 
       <footer>
