@@ -1,4 +1,13 @@
+import Formulario from "./components/Formulario";
+import { useState } from "react";
+
 function App() {
+  const [vehiculos, setVehiculos] = useState([]);
+
+  const agregarVehiculo = (vehiculo) => {
+    setVehiculos([...vehiculos, vehiculo]);
+  };
+
   return (
     <>
       <header>
@@ -6,14 +15,15 @@ function App() {
       </header>
 
       <main>
-        <p></p>
+        <h2>Cupos disponibles: {10 - vehiculos.length}</h2>
+        <Formulario agregarVehiculo={agregarVehiculo} />
       </main>
 
       <footer>
-        <p></p>
+        <p>Front End</p>
       </footer>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
